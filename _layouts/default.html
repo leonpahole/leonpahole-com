@@ -3,11 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <title>Leon Pahole | {{ page.title }}</title>
+    <script
+      src="https://kit.fontawesome.com/2568280276.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="/assets/css/styles.css" />
     {% feed_meta %} {% seo %}
   </head>
   <body>
-    <div class="site-content">
+    <div {% if page.url !="/" %}class="site-content" {% endif %}>
       {{ content }}
     </div>
   </body>

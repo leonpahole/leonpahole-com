@@ -63,7 +63,7 @@ body {
 }
 
 .front-page-menu-item-container .menu-item > a {
-  text-decoration: none;
+  text-decoration: underline;
   color: var(--text-color-dark);
 }
 
@@ -78,9 +78,19 @@ body {
   justify-content: flex-start;
   align-items: center;
 
-  padding-top: 80px;
-  padding-bottom: 70px;
   box-sizing: border-box;
+}
+
+.fas {
+  width: 20px;
+}
+
+.presentation-summary {
+  padding-top: 20px;
+  width: 900px;
+  text-align: left;
+  font-size: large;
+  line-height: 30px;
 }
 
 .welcome-image {
@@ -498,7 +508,7 @@ body {
 }
 
 .header-nav-menu-item-container .menu-item > a {
-  text-decoration: none;
+  text-decoration: underline;
   color: var(--text-color-dark);
 }
 
