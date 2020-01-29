@@ -1,0 +1,42 @@
+@import "variables";
+@import "breakpoints";
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: unset;
+
+  font-family: $font-family;
+  color: $text-color;
+
+  h1 {
+    font-size: $font-size-h1;
+  }
+
+  h2 {
+    font-size: $font-size-h2;
+  }
+
+  p {
+    font-size: $font-size-p;
+  }
+
+  a {
+    text-decoration: underline;
+    color: $link-color;
+  }
+
+  /* wrapper around the website */
+  .site-content {
+    margin-left: 50px;
+    margin-right: 100px;
+    margin-bottom: 40px;
+  }
+
+  .site-content-no-margins {
+    margin: 0px !important;
+  }
+}

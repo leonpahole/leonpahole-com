@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <title>Leon Pahole | {{ page.title }}</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,
+                                 maximum-scale=1.0, user-scalable=no"
+    />
     <script
       src="https://kit.fontawesome.com/2568280276.js"
       crossorigin="anonymous"
@@ -11,7 +16,7 @@
     {% feed_meta %} {% seo %}
   </head>
   <body>
-    <div {% if page.url !="/" %}class="site-content" {% endif %}>
+    <div class="site-content site-content-no-margins">
       {{ content }}
     </div>
   </body>

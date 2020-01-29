@@ -2,39 +2,56 @@
 title: Home
 ---
 
-<section class="welcome-section">
-  <img class="welcome-image" alt="Leon Pahole" src="/assets/images/Leon.png" />
+<section class="home-page-section">
+  <img class="personal-image" alt="Leon Pahole" src="/assets/images/Leon.png" />
 
-  <div class="welcome-text-container">
-    <h1 class="welcome-header">Hi, I'm Leon Pahole</h1>
-    <p class="welcome-subtitle">
+  <div class="greeting-container">
+    <h1 class="greeting-title">Hi, I'm Leon Pahole</h1>
+    <h2 class="greeting-subtitle">
       Software developer &bull; computer science student
-    </p>
+    </h2>
+  </div>
 
-    <nav id="site-navigation" class="front-page-menu">
-      <ul class="front-page-menu-item-container">
+  <div class="navigation-container">
+    <nav class="home-page-menu">
+      <ul class="item-container">
         <li class="menu-item"><a href="#about-me-section">About me</a></li>
         <li class="menu-item"><a href="#">Blog</a></li>
         <li class="menu-item"><a href="#">Contact</a></li>
       </ul>
     </nav>
+  </div>
 
-    <p class="presentation-summary">
+  <div class="short-presentation-container">
+    <p>
       <i class="fas fa-globe-europe"></i> I come from Maribor, Slovenia and I am
-      23 years old.<br />
-      <i class="fas fa-heart"></i> I love anything related to computers.<br />
-      <i class="fas fa-graduation-cap"></i> I have a bachelors degree in
-      computer science and information technologies and I currently study for a
-      masters degree at Faculty of electrical engineering, computer science and
-      informatics in Maribor.<br />
-      <i class="fas fa-briefcase"></i> I currently work as a web developer,
-      system administator, devops engineer and cloud architect.<br />
-      <i class="fas fa-lightbulb"></i> My current points of interest include
-      blockchain, machine learning and continous integration.<br /><br />
-      For more information, <a href="about.html">check out my full CV</a>.
+      23 years old.
     </p>
+    <p><i class="fas fa-heart"></i> I love anything related to computers.</p>
+    <p>
+      <i class="fas fa-graduation-cap"></i> I have a bachelors degree in
+      computer science and information technologies. I currently study for a
+      masters degree at Faculty of electrical engineering, computer science and
+      informatics in Maribor.
+    </p>
+    <p>
+      <i class="fas fa-briefcase"></i> I currently work as a web developer,
+      system administator, devops engineer and cloud architect.
+    </p>
+    <p>
+      <i class="fas fa-lightbulb"></i> My current points of interest include
+      blockchain, machine learning and continous integration.
+    </p>
+    <br />
+    <p>For more information, <a href="about.html">check out my full CV</a>.</p>
   </div>
 </section>
+
+<script>
+  var typed = new Typed("#typed", {
+    stringsElement: "#typed-strings"
+  });
+</script>
 
 <!--
 <section id="about-me-section" class="information-section">
