@@ -16,6 +16,21 @@
     {% feed_meta %} {% seo %}
   </head>
   <body>
+    {% if page.url != "/" %}
+    <div class="header-navigation-container">
+      <h2 class="navigation-title">
+        <a href="index.html" class="title-link">Leon Pahole</a>
+      </h2>
+      <ul class="item-container">
+        {% for item in site.data.navigation %}
+        <li class="menu-item {% if page.url == item.link %}selected{% endif %}">
+          <a href="{{ item.link }}">{{ item.name }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
     <div class="site-content site-content-no-margins">
       {{ content }}
     </div>

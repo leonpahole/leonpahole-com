@@ -15,9 +15,9 @@ title: Home
   <div class="navigation-container">
     <nav class="home-page-menu">
       <ul class="item-container">
-        <li class="menu-item"><a href="#about-me-section">About me</a></li>
-        <li class="menu-item"><a href="#">Blog</a></li>
-        <li class="menu-item"><a href="#">Contact</a></li>
+        {% for item in site.data.navigation %}
+        <li class="menu-item"><a href="{{ item.link }}">{{ item.name }}</a></li>
+        {% endfor %}
       </ul>
     </nav>
   </div>
