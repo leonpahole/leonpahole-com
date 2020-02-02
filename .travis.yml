@@ -18,6 +18,7 @@ deploy:
 branches:
   only:
     - master
+    - /^v.*$/
 
 env:
   global:
