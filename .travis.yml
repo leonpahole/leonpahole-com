@@ -1,40 +1,28 @@
 language: ruby
 rvm:
   - 2.6.3
-
 script: "./script/cibuild.sh"
-
 deploy:
   provider: s3
   access_key_id: AKIAQ2QXIVZXMMO7QEHR
   secret_access_key:
-    secure: GJeoDiNki/JX4SQbs+KsTeD1YwUmT84h7cJu2/OL/k2xB7WSFHt9XWeWUWb8ied7Y1hCvdcSxx/UMPpMWkzsrOlx+uksG7yZ+cxYnofVymXA7i1ZDw9UUK51Kswnv9QN/TYWGBMb8eH9SJOkHvS+3he1TDGz5wtqKxOoLnqTkeVt/UNqjNQxTH85BivGSi5kwCZMWuUBtlTtkbc86qcO/rc6G9ROf4ZjxzrMofHZcE17q9vWle5YiT8JX4WFXu8XvSRmei+giKuIMakM42WQ1GOZhIzIuhFoAzvh5L9vCXyXK7AQzyejlX7Cy5D1Q16FLBfrZTrF/w+qfx9hIJZP6erVrYoWfF76JTWgSpTej570pc+Rp4gxmwfAzC163jEzgE+aBCOTV2yQ48fKXWIfHgH4QKUqdMJSLCbXhX9ffkYtpr0Alq0Z0JqqWL4MYmElTJVNhbEINYQF2OIM1JEh9eXQdQBvTEzvhliolql/5ZB71LKO0BEW87RUSql5QzEUZ/H3yGEWMnbdofh7gJUR4bi6he7g62N1svQI5uCLndsE94TprxEibc0Ce1nULHmXhj1wf3c7nGOkxSi2/sRgzHmRwTxAFm3Ey1n7ZsY9Ur7BYjQN7kVHmeronOp5qH7enZ6KWqJJBhZg44TS5pp0eKcjZNqiylkMBkyNzZc8AzU=
+    secure: eLlcnkJQmK6WeVYZoyMChTNmzgs8Z5BKnSdefvWxl7ufJKw7vMIeX5WdH7p40GgWT1DTILs4NQ9X5SgjrdrV37SNbQ5iMQULzFxII3fyRGOTC7osWGM1auPhkLr6kPJzjdooPvQifR4h4LKpV/hn0Q9Jrrz+kZUkTKmVJCz4LO0Ejopt/8RM3pePECj0eyO87oUCze2rpjoFC6bCzdxylN3Z7/apS2o1DMAvDsGRXPnV++t2lagcTSTdh472BqeGDHrYsCnI7GYnIMn6+V6V4Xyxd1eXRqiFRUwS7mSUxMnicMC/YUNwn+tImtdn0wcxfl0cSb6s0qkP8QemyqwBgk7PJWCnxEEwOqR9iZ6H3VcYTm+q9oQuPNyVVnGTemWNy2a2XC0OcLBBmtWm2C9SZyp2jvBPUzoRv34CVpl3lsdl1/miWCGBJ59loHUtsm5H9dwFtDpM5RTTVVCkCUNQRaq184q8qy/zMtQpNKKHO4gOLdJz8/Pyg/p09zPMyPyuq0dj1fanwp6iwwDIgV4OUBS9X7RpVMqXAaIyyZ8irClpk039p4rAN8aOy0jTJtfc5jcdPGRt1NpFCiPKYM/0IxPSeHI7JY0G8bqCAo8R3KdyvUytmc+0CYlv07u4XE45mKFfg7db+Eh7SQrXtXRWcCP0mACzBWxr48OPVi86Ekw=
   bucket: www.leonpahole.com
   local_dir: _site
   skip_cleanup: true
   on:
-    tags: true
+    repo: leonpahole/leonpahole-com
 
 branches:
   only:
     - master
-    - /^v.*$/
-
-addons:
-  artifacts:
-      s3_region: "eu-central-1"
-      paths:
-        - $(git ls-files -o app/build/outputs | tr "\n" ":")
-
-env:
-  global:
-    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-
+    - "/^v.*$/"
 addons:
   apt:
     packages:
       - libcurl4-openssl-dev
-
+env:
+  global:
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 sudo: false
-
 cache: bundler
