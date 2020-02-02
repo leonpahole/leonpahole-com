@@ -12,6 +12,8 @@ deploy:
   bucket: leonpahole
   local_dir: _site
   skip_cleanup: true
+  on:
+    tags: true
 
 branches:
   only:
