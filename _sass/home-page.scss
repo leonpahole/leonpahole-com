@@ -12,8 +12,6 @@
 
   box-sizing: border-box;
 
-  padding-left: 20px;
-  padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
 
@@ -35,10 +33,16 @@
   .greeting-container {
     text-align: center;
 
+    .greeting-title {
+      margin: 20px 0 10px 0;
+    }
+
     .greeting-subtitle {
       text-transform: uppercase;
       color: rgba($text-color, 0.3);
       font-weight: unset;
+      margin-top: unset;
+      margin-bottom: 10px;
     }
   }
 
@@ -59,6 +63,7 @@
 
         @include respond-to("medium") {
           flex-direction: column;
+          margin-bottom: unset;
         }
 
         .menu-item {
@@ -67,7 +72,7 @@
 
           @include respond-to("medium") {
             width: 100px;
-            height: 40px;
+            height: 55px;
           }
         }
       }
@@ -76,15 +81,13 @@
 
   .short-presentation-container {
     padding-top: 20px;
-    width: 100%;
-    max-width: 900px;
     text-align: left;
     font-size: large;
     line-height: 30px;
 
     p {
       margin-top: unset;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
 
       .fas {
         width: 20px;

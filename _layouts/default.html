@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Leon Pahole | {{ page.title }}</title>
+    <title>{{ page.title }} | Leon Pahole</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0,
@@ -31,8 +31,10 @@
     </div>
     {% endif %}
 
-    <div class="site-content site-content-no-margins">
-      {{ content }}
+    <div class="site">
+      <div class="site-content">
+        {{ content }}
+      </div>
     </div>
   </body>
 </html>
