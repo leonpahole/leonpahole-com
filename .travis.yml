@@ -20,6 +20,12 @@ branches:
     - master
     - /^v.*$/
 
+addons:
+  artifacts:
+      s3_region: "eu-central-1"
+      paths:
+        - $(git ls-files -o app/build/outputs | tr "\n" ":")
+
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
