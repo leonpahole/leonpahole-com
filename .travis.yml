@@ -12,6 +12,7 @@ deploy:
   skip_cleanup: true
   on:
     repo: leonpahole/leonpahole-com
+    tags: true
 
 branches:
   only:
