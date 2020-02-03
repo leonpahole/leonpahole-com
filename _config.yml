@@ -3,6 +3,7 @@ defaults:
       path: ""
     values:
       layout: "default"
+      author: "Leon Pahole"
 
 plugins:
   - jekyll-feed
