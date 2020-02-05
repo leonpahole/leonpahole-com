@@ -4,8 +4,32 @@ defaults:
     values:
       layout: "default"
       author: "Leon Pahole"
+  # - scope:
+  #    path: ""
+  #    type: category
+  #  values:
+  #    layout: "category"
 
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-paginate-v2
+
+permalink: /:year/:month/:title.html
+
+autopages:
+  enabled: true
+  # ... etc.
+  collections:
+    permalink: /:coll/
+    enabled: true
+
+pagination:
+  enabled: true
+  per_page: 2
+  permalink: "/page/:num/"
+  title: ":title"
+  limit: 0
+  sort_field: "date"
+  sort_reverse: true

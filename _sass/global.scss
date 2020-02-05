@@ -17,14 +17,17 @@ body {
   }
 
   h2 {
+    margin: unset;
     font-size: $font-size-h2;
   }
 
   h3 {
+    margin: unset;
     font-size: $font-size-h3;
   }
 
   h4 {
+    margin: unset;
     font-size: $font-size-h4;
   }
 
@@ -60,6 +63,10 @@ body {
   .site-content {
     max-width: 900px;
     width: 100%;
+  }
+
+  .site-heading {
+    margin-bottom: 20px;
   }
   /* wrapper around the website end */
 
