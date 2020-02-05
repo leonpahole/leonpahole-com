@@ -1,10 +1,10 @@
 ---
 layout: blog_list
-title: Travel
-color: "red"
-permalink: /travel/
+title: Hello
+color: "#006400"
+permalink: /hello/
 pagination:
   enabled: true
-  category: travel
+  category: hello
   permalink: /:num/
 ---
