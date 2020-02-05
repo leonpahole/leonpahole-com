@@ -1,0 +1,42 @@
+<div class="blog-post-container">
+  <div class="blog-post-header">
+    {% if include.show_just_excerpt %}
+    <h2 class="blog-post-title">
+      <a href="{{ post.url }}">{{ include.post.title }}</a>
+    </h2>
+    {% else %}
+    <h1 class="site-heading">{{ include.post.title }}</h1>
+    {% endif %}
+
+    <div class="blog-post-categories-container">
+      {% for category in include.post.categories %}
+
+      <!-- not the best way to capitalize! ...but it works for now -->
+      {% assign category_capitalized = category | capitalize %} {% assign
+      category_object = site.pages | where:"title", category_capitalized | first
+      %}
+      <div
+        title="See all posts about {{ category_object.title | downcase }}"
+        class="badge blog-post-category"
+        style="background-color: {{ category_object.color }}"
+      >
+        <a
+          href="{% if category_object %}/{{category}} {% else %} # {% endif %}"
+        >
+          {{ category }}
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+
+    <span class="time-posted-on-text"
+      >Posted on {{ include.post.date | date: "%d.%m.%Y" }}</span
+    >
+  </div>
+
+  <div class="blog-post-body">
+    {% if include.show_just_excerpt %}
+    <p>{{ include.post.excerpt }}</p>
+    {% else %} {{ include.post.content }} {% endif %}
+  </div>
+</div>

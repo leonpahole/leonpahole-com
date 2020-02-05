@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+{% assign page_title = page.title | downcase %} {% if page_title == "blog" %}
+<h1 class="site-heading">Latest blog posts</h1>
+{% else %}
+<h1 class="site-heading">
+  Latest blog posts about {{ page.title | downcase }}
+</h1>
+{% endif %} {{ content }} {% for post in paginator.posts %}
+<div class="blog-post-container">
+  {% include post_view.html post=post show_just_excerpt=true %}
+</div>
+{% endfor %}
+
+<div class="pager">
+  <div class="previous">
+    {% if paginator.total_pages > 1 %} {% if paginator.previous_page %}
+    <a
+      href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+      >&larr; Newer Posts</a
+    >
+    {% endif %}
+  </div>
+  <div class="next">
+    {% if paginator.next_page %}
+    <a
+      href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+      >Older Posts &rarr;</a
+    >
+    {% endif %}
+  </div>
+  {% endif %}
+</div>

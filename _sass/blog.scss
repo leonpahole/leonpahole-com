@@ -1,0 +1,51 @@
+.badge {
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  padding: 2px 8px 2px 8px;
+  text-align: center;
+  border-radius: 7px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.blog-post-container,
+.blog-content {
+  &:not(:last-child) {
+    margin-bottom: 50px;
+  }
+
+  .blog-post-title {
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .blog-post-category:not(:last-child) {
+    margin-right: 2px;
+  }
+
+  .blog-post-header {
+    .site-heading {
+      margin: unset;
+    }
+
+    .blog-post-category {
+      a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+      }
+    }
+
+    .time-posted-on-text {
+      display: block;
+      margin-top: 4px;
+    }
+  }
+}
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+}
