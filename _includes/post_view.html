@@ -16,7 +16,7 @@
       category_object = site.pages | where:"title", category_capitalized | first
       %}
       <div
-        title="See all posts about {{ category_object.title | downcase }}"
+        title="See all blog posts about {{ category_object.title | downcase }}"
         class="badge blog-post-category"
         style="background-color: {{ category_object.color }}"
       >
