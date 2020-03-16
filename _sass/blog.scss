@@ -11,6 +11,8 @@
 
 .blog-post-container,
 .blog-content {
+  word-break: break-word;
+
   &:not(:last-child) {
     margin-bottom: 50px;
   }
