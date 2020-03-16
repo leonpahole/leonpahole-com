@@ -21,7 +21,7 @@
         style="background-color: {{ category_object.color }}"
       >
         <a
-          href="{% if category_object %}/{{category}} {% else %} # {% endif %}"
+          href="{% if category_object %}{{ category_object.permalink }} {% else %} # {% endif %}"
         >
           {{ category }}
         </a>
@@ -37,6 +37,8 @@
   <div class="blog-post-body">
     {% if include.show_just_excerpt %}
     <p>{{ include.post.excerpt }}</p>
-    {% else %} {{ include.post.content }} {% endif %}
+    {% else %}
+    <p><b>Post contents: </b><i>{{ include.post.excerpt }}</i></p>
+    {{ include.post.content }} {% endif %}
   </div>
 </div>
