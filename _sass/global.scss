@@ -36,7 +36,8 @@ body {
     line-height: 30px;
   }
 
-  ul {
+  ul,
+  ol {
     font-size: $font-size-p;
     line-height: 30px;
     margin-bottom: unset;
