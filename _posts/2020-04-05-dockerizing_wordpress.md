@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Dockerizing wordpress for local development and production deployment using docker-compose (boilerplate code included)"
+title: "Dockerizing Wordpress for local development and production deployment using docker-compose (boilerplate code included)"
 excerpt: Just like any other web-based project, I decided to dockerize the Wordpress website I've been working on. This proved to be a more difficult task than I imagined due to user permission problems. At the end, I came up with an acceptable solution which I will describe in this post. The solution supports local Wordpress development and production deployment using docker-compose. I also provide boilerplate code for dockerized Wordpress.
 categories:
   - docker
