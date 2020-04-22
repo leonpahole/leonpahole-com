@@ -23,7 +23,7 @@
         <a
           href="{% if category_object %}{{ category_object.permalink }} {% else %} # {% endif %}"
         >
-          {{ category }}
+          {{ category | replace: "_", " "}}
         </a>
       </div>
       {% endfor %}

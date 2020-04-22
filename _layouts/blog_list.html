@@ -6,7 +6,7 @@ layout: default
 <h1 class="site-heading">Latest blog posts</h1>
 {% else %}
 <h1 class="site-heading">
-  Latest blog posts about {{ page.title | downcase }}
+  Latest blog posts tagged {{ page.title | downcase }}
 </h1>
 {% endif %} {{ content }} {% for post in paginator.posts %}
 <div class="blog-post-container">
