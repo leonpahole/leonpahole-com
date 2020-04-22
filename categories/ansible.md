@@ -1,10 +1,10 @@
 ---
 layout: blog_list
-title: Devops
-color: "#FF4500"
-permalink: /devops/
+title: Ansible
+color: "#800000"
+permalink: /ansible/
 pagination:
   enabled: true
-  category: devops
+  category: ansible
   permalink: /:num/
 ---

@@ -13,6 +13,8 @@
 .blog-content {
   word-break: break-word;
 
+  margin-bottom: 30px;
+
   &:not(:last-child) {
     margin-bottom: 50px;
   }
@@ -21,6 +23,15 @@
     a {
       text-decoration: none;
     }
+  }
+
+  .image-wrapper {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .blog-post-category:not(:last-child) {
