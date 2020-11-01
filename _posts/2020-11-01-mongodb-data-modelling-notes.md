@@ -190,6 +190,21 @@ db.history.updateOne(
 );
 ```
 
+## MongoDB vs PostgreSQL
+
+MongoDB is usually faster when it comes to writes, due to the fact that no data constraints need to be checked. If our data model is well designed reads can be faster, due to lack of joins. Sorting is faster in PostgreSQL as are joining and selecting without key. Aggregations are faster with MongoDB and counting may also be faster if we use the computed pattern.
+
+## Choosing the right database
+
+There is no set recipe, but we can look at some options:
+
+1. Integration - if we have an existing piece of technology that we want to use, it may be a good idea to choose a database that can directly integrate with that technology.
+2. Scaling - research which systems support distributed databases.
+3. Support - how much (paid) support does the company behind the database provide?
+4. [CAP principle](https://blog.nahurst.com/visual-guide-to-nosql-systems){:target="\_blank"} - consistency (read/write from any node and get the same data), availability (ability to access the cluster even if one node goes down) and partition tolerance (cluster functions even if a communication break between two nodes happens).
+5. Simplicity! Don't complicate it if you don't need to.
+<p></p>
+
 ## Conclusion
 
 Hopefully this gives you an idea of how MongoDB can speed up your application. Data modelling is a very complex process that requires the developer to know a lot about the application (especially it's frontend), make assumptions, incrementally optimize the schema and not be fearful of making tradeoffs (eg. duplication of data to make queries faster).
@@ -199,3 +214,7 @@ Hopefully this gives you an idea of how MongoDB can speed up your application. D
 - Mongo university: [https://university.mongodb.com/](https://university.mongodb.com/){:target="\_blank"}
 - Great talk by Joe Karlsson regarding data modelling: [https://www.joekarlsson.com/2020/04/mongodb-schema-design-best-practices/](https://www.joekarlsson.com/2020/04/mongodb-schema-design-best-practices/){:target="\_blank"}
 - Data modelling patterns: [https://www.mongodb.com/blog/post/building-with-patterns-a-summary](https://www.mongodb.com/blog/post/building-with-patterns-a-summary){:target="\_blank"}
+- Great talk about advanced schema design patterns [https://www.youtube.com/watch?v=bxw1AkH2aM4](https://www.youtube.com/watch?v=bxw1AkH2aM4){:target="\_blank"}
+- Comparison of PostgreSQL and MongoDB [https://www.youtube.com/watch?v=eM7hzKwvTq8](https://www.youtube.com/watch?v=eM7hzKwvTq8){:target="\_blank"}
+- How to Choose the Right Database? [https://www.youtube.com/watch?v=v5e_PasMdXc](https://www.youtube.com/watch?v=v5e_PasMdXc){:target="\_blank"}
+- Visual Guide to NoSQL Systems [https://blog.nahurst.com/visual-guide-to-nosql-systems](https://blog.nahurst.com/visual-guide-to-nosql-systems){:target="\_blank"}
