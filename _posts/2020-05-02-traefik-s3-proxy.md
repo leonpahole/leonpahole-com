@@ -181,6 +181,7 @@ Check out my other examples of Traefik usage, if you are interested:
 
 - [Nginx proxy example]({% post_url 2020-05-02-traefik-nginx-proxy %}) - connect a basic Nginx proxy to Traefik.
 - [Full-stack Angular + Node.js + Postgres application example]({% post_url 2020-05-02-traefik-nodejs-api-and-db %}) - connect a typical full-stack application to Traefik.
+- [IP whitelist example]({% post_url 2020-11-07-traefik-ip-whitelist %}) - allow only certain IP addresses to access selected Docker containers.
 
 <p></p>
 

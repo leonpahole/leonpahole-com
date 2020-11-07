@@ -203,6 +203,7 @@ Check out my other examples of Traefik usage, if you are interested:
 
 - [Nginx proxy example]({% post_url 2020-05-02-traefik-nginx-proxy %}) - connect a basic Nginx proxy to Traefik.
 - [Proxy to S3 bucket example]({% post_url 2020-05-02-traefik-s3-proxy %}) - use Traefik as a reverse proxy to an S3 bucket (to serve a static site).
+- [IP whitelist example]({% post_url 2020-11-07-traefik-ip-whitelist %}) - allow only certain IP addresses to access selected Docker containers.
 
 <p></p>
 

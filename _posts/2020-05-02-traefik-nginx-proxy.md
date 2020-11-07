@@ -54,6 +54,7 @@ Check out my other examples of Traefik usage, if you are interested:
 
 - [Full-stack Angular + Node.js + Postgres application example]({% post_url 2020-05-02-traefik-nodejs-api-and-db %}) - connect a typical full-stack application to Traefik.
 - [Proxy to S3 bucket example]({% post_url 2020-05-02-traefik-s3-proxy %}) - use Traefik as a reverse proxy to an S3 bucket (to serve a static site).
+- [IP whitelist example]({% post_url 2020-11-07-traefik-ip-whitelist %}) - allow only certain IP addresses to access selected Docker containers.
 
 <p></p>
 
